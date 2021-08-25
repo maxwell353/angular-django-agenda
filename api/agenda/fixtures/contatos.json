@@ -1,0 +1,47 @@
+[
+    {
+        "model": "agenda.Contato",
+        "pk": 1,
+        "fields": {
+            "nome": "Marcelo",
+            "telefone": "33421231",
+            "celular": "85992183712"
+        }
+    },
+    {
+        "model": "agenda.Contato",
+        "pk": 2,
+        "fields": {
+            "nome": "Algusto",
+            "telefone": "23425631",
+            "celular": "88992123712"
+        }
+    },
+    {
+        "model": "agenda.Contato",
+        "pk": 3,
+        "fields": {
+            "nome": "Cesar",
+            "telefone": "33429731",
+            "celular": "85992190712"
+        }
+    },
+    {
+        "model": "agenda.Contato",
+        "pk": 4,
+        "fields": {
+            "nome": "Julio",
+            "telefone": "21421231",
+            "celular": "31992313712"
+        }
+    },
+    {
+        "model": "agenda.Contato",
+        "pk": 5,
+        "fields": {
+            "nome": "Mauricio",
+            "telefone": "98435231",
+            "celular": "21993183712"
+        }
+    }
+]

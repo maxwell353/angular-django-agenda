@@ -88,7 +88,15 @@ export class HomeComponent implements OnInit, Acao {
         this.modal.dismissAll();
         this.loading.hide();
       }).catch((error) => {
-        alert("Erro: "+ error.error.nome[0]);
+        if(error.error.nome){
+          alert("Erro: "+ error.error.nome[0]);
+        } else if (error.error.telefone) {
+          alert("Erro: "+ error.error.telefone[0]);
+        } else if(error.error.celular) {
+          alert("Erro: "+ error.error.celular[0]);
+        } else {
+          alert("Erro: Desconhecido");
+        }
         this.loading.hide();
       }).finally(() => { this.submitted = false; });
     } else {
@@ -97,7 +105,15 @@ export class HomeComponent implements OnInit, Acao {
         this.modal.dismissAll();
         this.loading.hide();
       }).catch((error) => {
-        alert("Erro: "+ error.error.nome[0]);
+        if(error.error.nome){
+          alert("Erro: "+ error.error.nome[0]);
+        } else if (error.error.telefone) {
+          alert("Erro: "+ error.error.telefone[0]);
+        } else if(error.error.celular) {
+          alert("Erro: "+ error.error.celular[0]);
+        } else {
+          alert("Erro: Desconhecido");
+        }
         this.loading.hide();
       }).finally(() => { this.submitted = false; });
     }
