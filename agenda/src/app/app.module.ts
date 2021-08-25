@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -9,6 +9,8 @@ import { LoginComponent } from './autenticador/login/login.component';
 import { Constantes } from './util/constantes';
 import { HomeComponent } from './paginas/home/home.component';
 import { InterceptadorRequest } from './util/interceptador.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { InterceptadorRequest } from './util/interceptador.interceptor';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     Constantes,
     {provide: HTTP_INTERCEPTORS, useClass: InterceptadorRequest, multi: true}
