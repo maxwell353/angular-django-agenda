@@ -8,6 +8,7 @@
                     <th class="all" width="40%">Nome</th>
                     <th>Telefone</th>
                     <th>Celular</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,8 +16,53 @@
                     <td>{{item['nome']}}</td>
                     <td>{{item['telefone']}}</td>
                     <td>{{item['celular']}}</td>
+                    <td>
+                        <button type="button" (click)="editar(item['id']); openBackDropCustomClass(content);" class="btn btn-info">Editar</button> |
+                        <button type="button" (click)="remover(item['id'])" class="btn btn-danger">Remover</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+<button class="btn btn-outline-primary mb-2 mr-2" (click)="adicionar(); openBackDropCustomClass(content);">Adicionar</button>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Adicionar / Editar</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="contatoForm" id="contatoForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="form-control" required formControlName="nome" type="text" id="nome" placeholder="Entre com o nome do contato" [ngClass]="{ 'is-invalid': (submitted) && f.nome.errors }">
+                <div *ngIf="(submitted) && f.nome.errors" class="invalid-feedback">
+                    <div *ngIf="f.nome.errors.required">Nome obrigatório.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" required formControlName="telefone" type="text" id="telefone" placeholder="Digite o telefone" [ngClass]="{ 'is-invalid': (submitted) && f.telefone.errors }">
+                <div *ngIf="(submitted) && f.telefone.errors" class="invalid-feedback">
+                    <div *ngIf="f.telefone.errors.required">Telefone obrigatório.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input class="form-control" required formControlName="celular" type="text" id="celular" placeholder="Digite o celular" [ngClass]="{ 'is-invalid': (submitted) && f.celular.errors }">
+                <div *ngIf="(submitted) && f.celular.errors" class="invalid-feedback">
+                    <div *ngIf="f.celular.errors.required">Celular obrigatório.</div>
+                </div>
+            </div>
+            <div class="form-group mb-0 text-center">
+                <button class="btn btn-primary btn-block" type="submit"><i class="mdi mdi-login"></i> Salvar </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Cancelar</button>
+    </div>
+  </ng-template>

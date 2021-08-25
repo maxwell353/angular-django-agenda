@@ -11,6 +11,7 @@ import { HomeComponent } from './paginas/home/home.component';
 import { InterceptadorRequest } from './util/interceptador.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
