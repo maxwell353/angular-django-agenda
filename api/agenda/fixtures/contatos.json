@@ -4,8 +4,8 @@
         "pk": 1,
         "fields": {
             "nome": "Marcelo",
-            "telefone": "33421231",
-            "celular": "85992183712"
+            "telefone": "1235-4678",
+            "celular": "(12) 91235-4678"
         }
     },
     {
@@ -13,8 +13,8 @@
         "pk": 2,
         "fields": {
             "nome": "Algusto",
-            "telefone": "23425631",
-            "celular": "88992123712"
+            "telefone": "3398-4678",
+            "celular": "(85) 97965-4678"
         }
     },
     {
@@ -22,8 +22,8 @@
         "pk": 3,
         "fields": {
             "nome": "Cesar",
-            "telefone": "33429731",
-            "celular": "85992190712"
+            "telefone": "4598-7978",
+            "celular": "(88) 98035-4438"
         }
     },
     {
@@ -31,8 +31,8 @@
         "pk": 4,
         "fields": {
             "nome": "Julio",
-            "telefone": "21421231",
-            "celular": "31992313712"
+            "telefone": "5594-9978",
+            "celular": "(31) 97835-9678"
         }
     },
     {
@@ -40,8 +40,8 @@
         "pk": 5,
         "fields": {
             "nome": "Mauricio",
-            "telefone": "98435231",
-            "celular": "21993183712"
+            "telefone": "9898-1278",
+            "celular": "(12) 93829-8978"
         }
     }
 ]
